@@ -40,6 +40,15 @@ class KeyboardViewController: UIViewController, UICollectionViewDelegateFlowLayo
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        for row in letters {
+            let chars = Array(row)
+            keys.append(chars)
+        }
+        
+        setContraintsKeyboard()
+    }
+    
+    func setContraintsKeyboard() {
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -47,11 +56,6 @@ class KeyboardViewController: UIViewController, UICollectionViewDelegateFlowLayo
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
         ])
-        
-        for row in letters {
-            let chars = Array(row)
-            keys.append(chars)
-        }
     }
 }
 

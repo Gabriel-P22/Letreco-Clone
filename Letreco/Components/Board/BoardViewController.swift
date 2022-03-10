@@ -37,6 +37,10 @@ class BoardViewController: UIViewController, UICollectionViewDelegateFlowLayout,
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        setContraintsBoard()
+    }
+    
+    func setContraintsBoard() {
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35),
@@ -44,7 +48,6 @@ class BoardViewController: UIViewController, UICollectionViewDelegateFlowLayout,
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 
         ])
-        
     }
     
     public func reloadData() {

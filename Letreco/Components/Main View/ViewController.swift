@@ -62,7 +62,6 @@ class ViewController: UIViewController {
     
     func setconfig() {
      
-        
         NSLayoutConstraint.activate([
         
             boardVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -105,7 +104,6 @@ extension ViewController: KeyboardViewControllerDelegate {
         }
         
         boardVC.reloadData()
-        
     }
     
 }

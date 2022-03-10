@@ -29,12 +29,7 @@ class KeyCell: UICollectionViewCell {
         backgroundColor = .darkGray
         contentView.addSubview(label)
         
-        NSLayoutConstraint.activate([
-            label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            label.trailingAnchor.constraint(equalTo:contentView.trailingAnchor),
-            label.topAnchor.constraint(equalTo: contentView.topAnchor),
-            label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-        ])
+        setContraintsKeyCell()
         
     }
     
@@ -53,4 +48,12 @@ class KeyCell: UICollectionViewCell {
         label.text = String(letter).uppercased()
     }
     
+    func setContraintsKeyCell() {
+        NSLayoutConstraint.activate([
+            label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            label.trailingAnchor.constraint(equalTo:contentView.trailingAnchor),
+            label.topAnchor.constraint(equalTo: contentView.topAnchor),
+            label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+        ])
+    }
 }
